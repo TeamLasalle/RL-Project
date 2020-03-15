@@ -2,10 +2,13 @@
 
 ## generate response by pre-trained model
 
-__Seq2Seq generate response = ./script/run.sh S2S /output/test.txt /output/S2S_Response.txt__
-
-__Reinforcement Learning generate response = ./script/run.sh RL /output/test.txt /output/RL_Response.txt__
-
+__Seq2Seq generate response__
+```bash
+./script/run.sh S2S /output/test.txt /output/S2S_Response.txt
+```
+```bash
+Reinforcement Learning generate response = ./script/run.sh RL /output/test.txt /output/RL_Response.txt__
+```
 \<TYPE\> can be one of below:
 1. S2S
 2. RL
