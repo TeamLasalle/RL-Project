@@ -8,7 +8,7 @@ __Seq2Seq generate response__
 ```
 __Reinforcement Learning generate response__
 ```bash
-./script/run.sh RL /output/test.txt /output/RL_Response.txt__
+./script/run.sh RL /output/test.txt /output/RL_Response.txt
 ```
 \<TYPE\> can be one of below:
 1. S2S
@@ -28,19 +28,19 @@ type any filename you want
 
 __Seq2Seq 1 simulate dialog__
 ```bash
-./script/simulate.sh model/Seq2Seq/model-77 1 /output/test.txt /output/S2S_1_Dialog.txt__
+./script/simulate.sh model/Seq2Seq/model-77 1 /output/test.txt /output/S2S_1_Dialog.txt
 ```
 __Seq2Seq 2 simulate dialog__
 ```bash
-./script/simulate.sh model/Seq2Seq/model-77 2 /output/test.txt /output/S2S_2_Dialog.txt__
+./script/simulate.sh model/Seq2Seq/model-77 2 /output/test.txt /output/S2S_2_Dialog.txt
 ```
 __Reinforcement Learning 1 simulate dialog__
 ```bash
-./script/simulate.sh model/RL/model-56-3000 1 /output/test.txt /output/RL_1_Dialog.txt__
+./script/simulate.sh model/RL/model-56-3000 1 /output/test.txt /output/RL_1_Dialog.txt
 ```
 __Reinforcement Learning 2 simulate dialog__
 ```bash
-./script/simulate.sh model/RL/model-56-3000 2 /output/test.txt /output/RL_2_Dialog.txt__
+./script/simulate.sh model/RL/model-56-3000 2 /output/test.txt /output/RL_2_Dialog.txt
 ```
 for \<PATH TO MODEL\>
 
