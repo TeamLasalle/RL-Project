@@ -6,8 +6,9 @@ __Seq2Seq generate response__
 ```bash
 ./script/run.sh S2S /output/test.txt /output/S2S_Response.txt
 ```
+__Reinforcement Learning generate response__
 ```bash
-Reinforcement Learning generate response = ./script/run.sh RL /output/test.txt /output/RL_Response.txt__
+./script/run.sh RL /output/test.txt /output/RL_Response.txt__
 ```
 \<TYPE\> can be one of below:
 1. S2S
@@ -23,16 +24,24 @@ or you can create your own testing data (copy the format from abovementioned fil
 
 type any filename you want
 
-## simulate a dialog by pre-trained model
+## simulate a dialogue by pre-trained model
 
-__Seq2Seq 1 simulate dialog = ./script/simulate.sh model/Seq2Seq/model-77 1 /output/test.txt /output/S2S_1_Dialog.txt__
-
-__Seq2Seq 2 simulate dialog = ./script/simulate.sh model/Seq2Seq/model-77 2 /output/test.txt /output/S2S_2_Dialog.txt__
-
-__Reinforcement Learning 1 simulate dialog = ./script/simulate.sh model/RL/model-56-3000 1 /output/test.txt /output/RL_1_Dialog.txt__
-
-__Reinforcement Learning 2 simulate dialog = ./script/simulate.sh model/RL/model-56-3000 2 /output/test.txt /output/RL_2_Dialog.txt__
-
+__Seq2Seq 1 simulate dialog__
+```bash
+./script/simulate.sh model/Seq2Seq/model-77 1 /output/test.txt /output/S2S_1_Dialog.txt__
+```
+__Seq2Seq 2 simulate dialog__
+```bash
+./script/simulate.sh model/Seq2Seq/model-77 2 /output/test.txt /output/S2S_2_Dialog.txt__
+```
+__Reinforcement Learning 1 simulate dialog__
+```bash
+./script/simulate.sh model/RL/model-56-3000 1 /output/test.txt /output/RL_1_Dialog.txt__
+```
+__Reinforcement Learning 2 simulate dialog__
+```bash
+./script/simulate.sh model/RL/model-56-3000 2 /output/test.txt /output/RL_2_Dialog.txt__
+```
 for \<PATH TO MODEL\>
 
 to generate seq2seq dialog, type model/Seq2Seq/model-77
