@@ -1,5 +1,9 @@
 # RL-Project - RL Chatbot
 
+## For either of the pretrained models run the following
+```bash
+./script/download.sh
+```
 ## generate response by pre-trained model
 
 __Seq2Seq generate response__
@@ -10,19 +14,6 @@ __Reinforcement Learning generate response__
 ```bash
 ./script/run.sh RL ./output/test.txt ./output/RL_Response.txt
 ```
-\<TYPE\> can be one of below:
-1. S2S
-2. RL
-
-\<INPUT FILE\> is the testing data
-
-you can just use *tmp/sample_input.txt* or *tmp/sample_input_new.txt* in this repository for convenience
-
-or you can create your own testing data (copy the format from abovementioned files)
-
-\<OUTPUT FILE\> is the output of input file
-
-type any filename you want
 
 ## simulate a dialogue by pre-trained model
 
@@ -42,29 +33,9 @@ __Reinforcement Learning 2 simulate dialog__
 ```bash
 ./script/simulate.sh ./model/RL/model-56-3000 2 ./output/test.txt ./output/RL_2_Dialog.txt
 ```
-for \<PATH TO MODEL\>
-
-to generate seq2seq dialog, type model/Seq2Seq/model-77
-
-to generate RL dialog, type model/RL/model-56-3000
-
-\<SIMULATE TYPE\> can be 1 or 2
-
-the number represents # of former sentence(s) that chatbot considers
-
 __if you choose 1, chatbot only considers user's utterance__
 
 __if you choose 2, chatbot will considers user's utterance and chatbot's last utterance__
-
-\<INPUT FILE\> is the testing data
-
-you can just use *tmp/sample_input.txt* or *tmp/sample_input_new.txt* in this repository for convenience
-
-or you can create your own testing data (copy the format from abovementioned files)
-
-\<OUTPUT FILE\> is the output of input file
-
-type any filename you want
 
 ## start training
 ### Step0: change configs
