@@ -75,7 +75,7 @@ you can change some training hyper-parameters, or just keep the original one
 ### Step1: download data & libraries
 we use [Cornell Movie-Dialogs Corpus](https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html)
 
-you need to download it and put it into data/ directory
+you need to unzip the file in data/ directory
 
 and you need to download some libraries with pip:
 ```bash
