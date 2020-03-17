@@ -22,8 +22,8 @@ import time
 default_model_path = './model/model-20'
 default_simulate_type = 1  # type 1 use one former sent, type 2 use two former sents
 
-testing_data_path = 'sample_input.txt' if len(sys.argv) <= 3 else sys.argv[3]
-output_path = 'sample_dialog_output.txt' if len(sys.argv) <= 4 else sys.argv[4]
+testing_data_path = './output/test.txt' if len(sys.argv) <= 3 else sys.argv[3]
+output_path = './output/test.txt' if len(sys.argv) <= 4 else sys.argv[4]
 
 max_turns = config.MAX_TURNS
 word_count_threshold = config.WC_threshold

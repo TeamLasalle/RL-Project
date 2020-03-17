@@ -1,10 +1,14 @@
-#sample comment from Chitra
-
 # RL-Project - RL Chatbot
 
 ## For either of the pretrained models run the following
 ```bash
 ./script/download.sh
+```
+```bash
+pip2 install -r requirements.txt
+```
+```bash
+pip install -r requirements.txt
 ```
 ## generate response by pre-trained model
 
@@ -21,19 +25,19 @@ __Reinforcement Learning generate response__
 
 __Seq2Seq 1 simulate dialog__
 ```bash
-./script/simulate.sh ./model/Seq2Seq/model-77 1 ./output/test.txt ./output/S2S_1_Dialog.txt
+./script/simulate.sh './model/Seq2Seq/model-77' 1 ./output/test.txt ./output/S2S_1_Dialog.txt
 ```
 __Seq2Seq 2 simulate dialog__
 ```bash
-./script/simulate.sh ./model/Seq2Seq/model-77 2 ./output/test.txt ./output/S2S_2_Dialog.txt
+./script/simulate.sh './model/Seq2Seq/model-77' 2 ./output/test.txt ./output/S2S_2_Dialog.txt
 ```
 __Reinforcement Learning 1 simulate dialog__
 ```bash
-./script/simulate.sh ./model/RL/model-56-3000 1 ./output/test.txt ./output/RL_1_Dialog.txt
+./script/simulate.sh './model/RL/model-56-3000' 1 ./output/test.txt ./output/RL_1_Dialog.txt
 ```
 __Reinforcement Learning 2 simulate dialog__
 ```bash
-./script/simulate.sh ./model/RL/model-56-3000 2 ./output/test.txt ./output/RL_2_Dialog.txt
+./script/simulate.sh './model/RL/model-56-3000' 2 ./output/test.txt ./output/RL_2_Dialog.txt
 ```
 __if you choose 1, chatbot only considers user's utterance__
 
