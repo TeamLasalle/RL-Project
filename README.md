@@ -1,12 +1,15 @@
 # RL-Project - RL Chatbot
 
-## For either of the pretrained models run the following
+## For either of the pretrained models run the following 3 steps
+### Step1
 ```bash
 ./script/download.sh
 ```
+### Step2
 ```bash
 pip2 install -r requirements.txt
 ```
+### Step3
 ```bash
 pip install -r requirements.txt
 ```
