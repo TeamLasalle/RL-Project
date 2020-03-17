@@ -1,4 +1,3 @@
-## Comment to test Seb's push
 # path to training data
 # sample update from pycharm [Chitra]
 training_data_path = 'data/conversations_lenmax22_formersents2_with_former'
