@@ -9,15 +9,15 @@ from gensim.models import word2vec, KeyedVectors
 
 WORD_VECTOR_SIZE = 300
 
-raw_movie_conversations = open('data/movie_conversations.txt', 'r').read().split('\n')[:-1]
+raw_movie_conversations = open('./data/movie_conversations.txt', 'r').read().split('\n')[:-1]
 
-utterance_dict = pickle.load(open('data/utterance_dict', 'rb'))
+utterance_dict = pickle.load(open('./data/utterance_dict', 'rb'))
 
 ts = time.time()
-corpus = word2vec.Text8Corpus("data/tokenized_all_words.txt")
+corpus = word2vec.Text8Corpus("./data/tokenized_all_words.txt")
 word_vector = word2vec.Word2Vec(corpus, size=WORD_VECTOR_SIZE)
-word_vector.wv.save_word2vec_format(u"model/word_vector.bin", binary=True)
-word_vector = KeyedVectors.load_word2vec_format('model/word_vector.bin', binary=True)
+word_vector.wv.save_word2vec_format(u"./model/word_vector.bin", binary=True)
+word_vector = KeyedVectors.load_word2vec_format('./model/word_vector.bin', binary=True)
 print("Time Elapsed: {} secs\n".format(time.time() - ts))
 
 """ Extract only the vocabulary part of the data """
@@ -51,7 +51,7 @@ for conversation in raw_movie_conversations:
     con_count += 1
     if con_count % 1000 == 0:
         print('con_count {}, traindata_count {}'.format(con_count, traindata_count))
-pickle.dump(conversations, open('data/reversed_conversations_lenmax22', 'wb'), True)
+pickle.dump(conversations, open('./data/reversed_conversations_lenmax22', 'wb'), True)
 print("Time Elapsed: {} secs\n".format(time.time() - ts))
 
 # some statistics of training data
@@ -76,8 +76,8 @@ for i in range(len(conversations)):
     sum_b += len_b
     len_a_list.append(len_a)
     len_b_list.append(len_b)
-np.save("data/reversed_lenmax22_a_list", np.array(len_a_list))
-np.save("data/reversed_lenmax22_b_list", np.array(len_b_list))
+np.save("./data/reversed_lenmax22_a_list", np.array(len_a_list))
+np.save("./data/reversed_lenmax22_b_list", np.array(len_b_list))
 print("max_a_ind {}, max_b_ind {}".format(max_a_ind, max_b_ind))
 print("max_a {}, max_b {}, avg_a {}, avg_b {}".format(max_a, max_b, sum_a/len(conversations), sum_b/len(conversations)))
 
@@ -109,7 +109,7 @@ for conversation in raw_movie_conversations:
     con_count += 1
     if con_count % 1000 == 0:
         print('con_count {}, traindata_count {}'.format(con_count, traindata_count))
-pickle.dump(conversations, open('data/conversations_lenmax22_formersents2_with_former', 'wb'), True)
+pickle.dump(conversations, open('./data/conversations_lenmax22_formersents2_with_former', 'wb'), True)
 # pickle.dump(former_sents, open('data/conversations_lenmax22_former_sents', 'wb'), True)
 print("Time Elapsed: {} secs\n".format(time.time() - ts))
 
@@ -168,7 +168,7 @@ for conversation in raw_movie_conversations:
     con_count += 1
     if con_count % 1000 == 0:
         print('con_count {}, traindata_count {}'.format(con_count, traindata_count))
-pickle.dump(conversations, open('data/conversations_lenmax22_former_sents2', 'wb'), True)
+pickle.dump(conversations, open('./data/conversations_lenmax22_former_sents2', 'wb'), True)
 print("Time Elapsed: {} secs\n".format(time.time() - ts))
 
 # some statistics of training data
@@ -221,7 +221,7 @@ for conversation in raw_movie_conversations:
     con_count += 1
     if con_count % 1000 == 0:
         print('con_count {}, traindata_count {}'.format(con_count, traindata_count))
-pickle.dump(conversations, open('data/conversations_lenmax22', 'wb'), True)
+pickle.dump(conversations, open('./data/conversations_lenmax22', 'wb'), True)
 print("Time Elapsed: {} secs\n".format(time.time() - ts))
 
 # # some statistics of training data

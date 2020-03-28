@@ -273,7 +273,7 @@ def train():
     global dull_set
 
     wordtoix, ixtoword, bias_init_vector = data_parser.preProBuildWordVocab(word_count_threshold=word_count_threshold)
-    word_vector = KeyedVectors.load_word2vec_format('model/word_vector.bin', binary=True)
+    word_vector = KeyedVectors.load_word2vec_format('./model/word_vector.bin', binary=True)
 
     if len(dull_set) > batch_size:
         dull_set = dull_set[:batch_size]

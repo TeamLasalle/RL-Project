@@ -84,7 +84,7 @@ def pad_sequences(sequences, maxlen=None, dtype='int32', padding='pre', truncati
 
 def train():
     wordtoix, ixtoword, bias_init_vector = data_parser.preProBuildWordVocab(word_count_threshold=word_count_threshold)
-    word_vector = KeyedVectors.load_word2vec_format('model/word_vector.bin', binary=True)
+    word_vector = KeyedVectors.load_word2vec_format('./model/word_vector.bin', binary=True)
 
     model = Seq2Seq_chatbot(
             dim_wordvec=dim_wordvec,

@@ -46,7 +46,7 @@ def refine(data):
 def test(model_path=default_model_path):
     testing_data = open(testing_data_path, 'r').read().split('\n')
 
-    word_vector = KeyedVectors.load_word2vec_format('model/word_vector.bin', binary=True)
+    word_vector = KeyedVectors.load_word2vec_format('./model/word_vector.bin', binary=True)
 
     _, ixtoword, bias_init_vector = data_parser.preProBuildWordVocab(word_count_threshold=word_count_threshold)
 
