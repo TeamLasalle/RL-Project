@@ -10,7 +10,7 @@ scipy==1.2.2
 smart-open==1.8.4
 funcsigs==1.0.2
 pbr==5.4.0
-setuptools==44.0.0
+setuptools==65.5.1
 bz2file==0.98
 boto==2.49.0
 requests==2.21.0
